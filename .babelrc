@@ -19,6 +19,9 @@
                 "style": true
             }
         ],
-        "@babel/transform-runtime", "@babel/plugin-transform-regenerator"
+        "@babel/transform-runtime", 
+        "@babel/plugin-transform-regenerator",
+        "@babel/plugin-proposal-class-properties",
+        "react-hot-loader/babel"
     ]
 }

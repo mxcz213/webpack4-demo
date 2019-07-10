@@ -1,12 +1,13 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const theme = require('./src/theme')
 
 module.exports = {
     entry: {
         app: './src/main.js',
     },
     plugins: [
+        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             title: 'webpack 4 production',
             template: 'index.html',
@@ -18,7 +19,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     resolve: {
-        extensions: ['.js', '.css', '.less']
+        extensions: ['.js', '.css', '.less'],
+        alias: {
+            'react-dom': '@hot-loader/react-dom'
+        }
     },
     module: {
         rules: [

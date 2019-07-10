@@ -1,6 +1,5 @@
-import { square, foo } from './math.js'
+import { square } from './math.js'
 console.log('打印2的平方',square(2))
-console.log('执行foo', foo())
 
 let arr = [1,2,3];
 let arr2 = arr.map(item => item + 2)
@@ -16,4 +15,8 @@ l().then((value) => {
 })
 
 const app = document.getElementById('app')
-app.innerHTML = 'hello world lalalala';
+app.innerHTML = 'hello world';
+
+if(module.hot){
+    module.hot.accept();
+}

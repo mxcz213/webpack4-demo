@@ -10,6 +10,8 @@ module.exports = merge(common, {
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
         hot: true,
+        hotOnly: true,
+        open: false,  //自动打开浏览器
         port: 9000,
         overlay: {
             warnings: false,
@@ -17,7 +19,8 @@ module.exports = merge(common, {
         }
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),   //启用HMR,配合server的hot
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [
