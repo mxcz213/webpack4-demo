@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useReducer } from 'react'
 import { Button } from 'antd'
-import './css/main'
 
 function countReducer(state, action){
     switch(action.type){
