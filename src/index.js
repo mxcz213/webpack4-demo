@@ -15,7 +15,7 @@ l().then((value) => {
 })
 
 const app = document.getElementById('app')
-app.innerHTML = 'hello world';
+app.innerHTML = 'typescript';
 
 if(module.hot){
     module.hot.accept();

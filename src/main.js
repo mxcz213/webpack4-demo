@@ -11,8 +11,7 @@ const App = () => {
     return(
         <HashRouter basename="/">
             <Layout 
-                selectedKeys={selectedKeys} 
-                openKeys={openKeys} 
+                selectedKeys={selectedKeys}
                 onChangeSelectKey={(keys) => setSelectedKeys(keys)}
             >
                 <Route path="/" render={() => <Home onChangeSelectKey={(keys) => setSelectedKeys(keys)} />} exact />
